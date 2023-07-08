@@ -1,6 +1,6 @@
 let startTime;
 let elapsedTime = 0;
-let timerInterval;
+let timerInterval = null;
 // Format time to minute:second:milisecond
 function formatTime(milliseconds) {
   const minutes = Math.floor(milliseconds / 60000);
@@ -29,14 +29,16 @@ function startchronometer() {
   }
 
 // Print the chronometer number
-  function printchronometerNumber() {
-    const formattedTime = formatTime(elapsedTime);
-    const resultsDiv = document.getElementById('results');
-    const resultP = document.createElement('p');
-    resultP.textContent = formattedTime;
-    resultsDiv.appendChild(resultP);
+function printchronometerNumber() {
+    if (elapsedTime > 0) {
+      const formattedTime = formatTime(elapsedTime);
+      const resultsDiv = document.getElementById('results');
+      const resultP = document.createElement('p');
+      resultP.textContent = formattedTime;
+      resultsDiv.appendChild(resultP);
+    }
   }
-
+  
 // reset chronometer
   function resetchronometer() {
     clearInterval(timerInterval);

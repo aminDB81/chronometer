@@ -1,0 +1,55 @@
+.main {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  #stopwatch {
+    font-size: 48px;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.5s;
+    font-weight: 500;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  button:active {
+    background-color: #3e8e41;
+  }
+
+  #results {
+    margin-top: 20px;
+  }
+
+  #results p {
+    margin: 5px 0;
+    font-size: 16px;
+    text-align: center;
+    font-size: 28px;
+  }
