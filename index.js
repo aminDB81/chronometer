@@ -36,7 +36,7 @@ function startchronometer() {
     resultP.textContent = formattedTime;
     resultsDiv.appendChild(resultP);
   }
-  
+
 // reset chronometer
   function resetchronometer() {
     clearInterval(timerInterval);
@@ -44,3 +44,8 @@ function startchronometer() {
     document.getElementById('stopwatch').textContent = '00:00:00';
     document.getElementById('results').textContent = '';
   }
+
+  // Event listeners for buttons
+  document.getElementById('startBtn').addEventListener('click', startchronometer);
+  document.getElementById('stopBtn').addEventListener('click', printchronometerNumber);
+  document.getElementById('resetBtn').addEventListener('click', resetchronometer);
