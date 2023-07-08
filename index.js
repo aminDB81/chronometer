@@ -28,10 +28,19 @@ function startchronometer() {
     timerInterval = setInterval(updatechronometer, 1);
   }
 
+// Print the chronometer number
   function printchronometerNumber() {
     const formattedTime = formatTime(elapsedTime);
     const resultsDiv = document.getElementById('results');
     const resultP = document.createElement('p');
     resultP.textContent = formattedTime;
     resultsDiv.appendChild(resultP);
+  }
+  
+// reset chronometer
+  function resetchronometer() {
+    clearInterval(timerInterval);
+    elapsedTime = 0;
+    document.getElementById('stopwatch').textContent = '00:00:00';
+    document.getElementById('results').textContent = '';
   }
