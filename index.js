@@ -23,7 +23,15 @@ function updatechronometer() {
   document.getElementById("stopwatch").textContent = formattedTime;
 }
 // starting chronometer
-function startStopwatch() {
+function startchronometer() {
     startTime = Date.now();
     timerInterval = setInterval(updatechronometer, 1);
+  }
+
+  function printchronometerNumber() {
+    const formattedTime = formatTime(elapsedTime);
+    const resultsDiv = document.getElementById('results');
+    const resultP = document.createElement('p');
+    resultP.textContent = formattedTime;
+    resultsDiv.appendChild(resultP);
   }
