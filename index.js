@@ -13,3 +13,17 @@ function formatTime(milliseconds) {
     .toString()
     .padStart(2, "0")}:${millisecondsFormatted}`;
 }
+
+
+function updatechronometer() {
+  const currentTime = Date.now();
+  elapsedTime += currentTime - startTime;
+  startTime = currentTime;
+  const formattedTime = formatTime(elapsedTime);
+  document.getElementById("stopwatch").textContent = formattedTime;
+}
+// starting chronometer
+function startStopwatch() {
+    startTime = Date.now();
+    timerInterval = setInterval(updatechronometer, 1);
+  }
